@@ -5,13 +5,29 @@
 from fastai.vision import *
 from fastai.metrics import error_rate
 import os
-cp -r /kaggle/input/images/images /kaggle/working/
+
+
+
+os.mkdir("/kaggle/yourdatasetname")
+kaynak = "/kaggle/input/dataname/dataname/"
+
+hedef = "/kaggle/yourdatasetname/"
+files = os.listdir(kaynak)
+files.sort()
+dosya_sayisi = 0
+for f in files:
+    dosya_sayisi += 1
+    k = kaynak+f
+    h = hedef+f
+    shutil.copy(k,h)
+ 
+print("%d adet dosya kopyalandı" %dosya_sayisi)
 bs = 16
-pwd
-'/kaggle/working'
+
+
 Datasetimizin yolunu değşkene atıyoruz.
 
-path = pathlib.Path("/kaggle/working/images/")
+path = pathlib.Path("/kaggle/yourdatasetname/")
 path_img = path
 
 
